@@ -1,0 +1,30 @@
+{
+  "name": "azkahps-api",
+  "version": "1.0.0",
+  "description": "Unified Media Scraper REST API & Developer Portal for Movies, Anime, and Comics",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node test/api.test.js"
+  },
+  "keywords": [
+    "scraper",
+    "unified-api",
+    "movies",
+    "anime",
+    "comics",
+    "manga",
+    "hono",
+    "streaming"
+  ],
+  "author": "Azka Hafidzha Putra Septo",
+  "license": "MIT",
+  "dependencies": {
+    "@hono/node-server": "^1.13.8",
+    "axios": "^1.7.9",
+    "cheerio": "^1.0.0",
+    "hono": "^4.7.4"
+  }
+}
