@@ -140,67 +140,7 @@ async function runAllTests() {
       }
     },
 
-    // 5. Short Drama (Multi-Provider Engine)
-    {
-      name: 'Short Drama: Providers List',
-      path: '/api/v1/shortdrama/providers',
-      fn: (d) => {
-        if (!d.ok || !Array.isArray(d.data) || d.data.length < 5)
-          throw new Error('invalid providers list payload');
-      }
-    },
-    {
-      name: 'Short Drama: Unified Home (Melolo default)',
-      path: '/api/v1/shortdrama/home',
-      fn: (d) => {
-        if (!d.ok || d.category !== 'shortdrama' || d.provider !== 'melolo')
-          throw new Error('invalid shortdrama home payload');
-        if (!Array.isArray(d.data.items))
-          throw new Error('shortdrama items is not array');
-      }
-    },
-    {
-      name: 'Short Drama: Explicit Provider Home (ShortMax)',
-      path: '/api/v1/shortdrama/shortmax/home',
-      fn: (d) => {
-        if (!d.ok || d.provider !== 'shortmax' || !Array.isArray(d.data.items))
-          throw new Error('invalid shortmax home payload');
-      }
-    },
-    {
-      name: 'Short Drama: Search (Melolo)',
-      path: '/api/v1/shortdrama/search?q=cinta&lang=id',
-      fn: (d) => {
-        if (!d.ok || !Array.isArray(d.data.items) || d.data.items.length === 0)
-          throw new Error('invalid shortdrama search payload');
-      }
-    },
-    {
-      name: 'Short Drama: Episodes (Melolo)',
-      path: '/api/v1/shortdrama/episodes/7594776181166050357',
-      fn: (d) => {
-        if (!d.ok || !Array.isArray(d.data.episodes) || d.data.episodes.length === 0)
-          throw new Error('invalid shortdrama episodes payload');
-      }
-    },
-    {
-      name: 'Short Drama: Stream URL (Melolo MP4)',
-      path: '/api/v1/shortdrama/stream/7594776181166050357/1',
-      fn: (d) => {
-        if (!d.ok || !d.data.streamUrl || !Array.isArray(d.data.qualities))
-          throw new Error('invalid shortdrama stream payload');
-      }
-    },
-    {
-      name: 'Short Drama: Stream URL (ReelShort HLS Fallback)',
-      path: '/api/v1/shortdrama/reelshort/stream/6a9fa7885ca348a0e50b4697/1',
-      fn: (d) => {
-        if (!d.ok || !d.data.streamUrl || d.data.provider !== 'reelshort')
-          throw new Error('invalid reelshort stream payload');
-      }
-    },
-
-    // 6. Unified Media Proxy
+    // 5. Unified Media Proxy
     {
       name: 'Media Proxy: Chapter Image',
       path: '/api/v1/proxy/image?url=https%3A%2F%2Fcdn.itachi.my.id%2Fwp-content%2Fuploads%2Fimages%2Fs%2Fsolo-leveling%2Fchapter-spesial%2F1.jpg',

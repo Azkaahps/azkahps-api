@@ -1,6 +1,6 @@
 # AzkaHPS Unified Media REST API
 
-Unified, high-performance scraper REST API and developer portal combining Movies (LK21), Anime (Kuramanime), Comics (Ikiru), and Short Drama (Melolo + multi-platform) into a single modular monolith.
+Unified, high-performance scraper REST API and developer portal combining Movies (LK21), Anime (Kuramanime), and Comics (Ikiru) into a single modular monolith.
 
 Built with Hono v4, Node.js, in-memory TTL caching, and the Provider Registry Pattern.
 
@@ -91,17 +91,6 @@ Upstream base URLs for each provider and the hierarchical TTL values are defined
 - `GET /api/v1/comic/chapters/:id?page=1` - full chapter listing by manga ID.
 - `GET /api/v1/comic/chapter/:id` - chapter reader images array.
 
-### Short Drama (Melolo and multi-provider hub)
-
-- `GET /api/v1/shortdrama/providers` - list of 16 supported platforms.
-- `GET /api/v1/shortdrama/home` - default home catalog. Supports `?provider=` and `?section=`.
-- `GET /api/v1/shortdrama/:provider/home` - explicit provider home catalog.
-- `GET /api/v1/shortdrama/latest` - latest drama feed.
-- `GET /api/v1/shortdrama/catalog?page=` - full catalog pagination.
-- `GET /api/v1/shortdrama/search?q=judul&lang=id` - cross-platform search.
-- `GET /api/v1/shortdrama/episodes/:id` - episode list.
-- `GET /api/v1/shortdrama/stream/:id/:ep` - direct video stream resolver (MP4 / HLS with automatic fallback).
-
 ### Unified Media Proxy
 
 - `GET /api/v1/proxy/stream?url={videoUrl}` - video HLS / MP4 stream proxy with Range header support.
@@ -147,7 +136,6 @@ src/
     movie/lk21/          LK21 and Dramamu movie and series scraper
     anime/kuramanime/    Kuramanime anime scraper with token handshake
     comic/ikiru/         Ikiru comic reader scraper
-    shortdrama/melolo/   universal short drama hub (16 platforms)
 test/
   api.test.js            integration test suite against a live server
 ```

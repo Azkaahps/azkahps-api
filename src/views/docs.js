@@ -464,7 +464,6 @@ export function renderDocsHtml() {
         <button class="filter-chip" onclick="filterCategory('movie')">MOVIE (LK21)</button>
         <button class="filter-chip" onclick="filterCategory('anime')">ANIME (Kuramanime)</button>
         <button class="filter-chip" onclick="filterCategory('comic')">COMIC (Ikiru)</button>
-        <button class="filter-chip" onclick="filterCategory('shortdrama')">SHORT DRAMA (Melolo)</button>
         <button class="filter-chip" onclick="filterCategory('proxy')">MEDIA PROXY</button>
       </div>
 
@@ -730,111 +729,6 @@ export function renderDocsHtml() {
               </div>
             </div>
             <button class="btn-test" onclick="runTest('/api/v1/comic/chapter/269591')">TEST RUNNER</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Section: Short Drama -->
-      <div class="category-group" data-category="shortdrama">
-        <div class="section-title">04. Short Drama (Multi-Provider Engine: Melolo, ShortMax, ReelShort, FlickReels, etc.)</div>
-        <div class="endpoint-list">
-          <div class="endpoint-card">
-            <div class="endpoint-left">
-              <span class="method-tag">GET</span>
-              <div>
-                <div class="endpoint-path">/api/v1/shortdrama/providers</div>
-                <div class="endpoint-desc">List of all 16 supported short drama platforms with active status and icons</div>
-              </div>
-            </div>
-            <button class="btn-test" onclick="runTest('/api/v1/shortdrama/providers')">TEST RUNNER</button>
-          </div>
-
-          <div class="endpoint-card">
-            <div class="endpoint-left">
-              <span class="method-tag">GET</span>
-              <div>
-                <div class="endpoint-path">/api/v1/shortdrama/home</div>
-                <div class="endpoint-desc">Default provider home catalog compilation (Melolo)</div>
-              </div>
-            </div>
-            <button class="btn-test" onclick="runTest('/api/v1/shortdrama/home')">TEST RUNNER</button>
-          </div>
-
-          <div class="endpoint-card">
-            <div class="endpoint-left">
-              <span class="method-tag">GET</span>
-              <div>
-                <div class="endpoint-path">/api/v1/shortdrama/shortmax/home</div>
-                <div class="endpoint-desc">Explicit provider home catalog (ShortMax: 100+ titles)</div>
-              </div>
-            </div>
-            <button class="btn-test" onclick="runTest('/api/v1/shortdrama/shortmax/home')">TEST RUNNER</button>
-          </div>
-
-          <div class="endpoint-card">
-            <div class="endpoint-left">
-              <span class="method-tag">GET</span>
-              <div>
-                <div class="endpoint-path">/api/v1/shortdrama/latest</div>
-                <div class="endpoint-desc">Latest short drama releases feed</div>
-              </div>
-            </div>
-            <button class="btn-test" onclick="runTest('/api/v1/shortdrama/latest')">TEST RUNNER</button>
-          </div>
-
-          <div class="endpoint-card">
-            <div class="endpoint-left">
-              <span class="method-tag">GET</span>
-              <div>
-                <div class="endpoint-path">/api/v1/shortdrama/catalog?page=1</div>
-                <div class="endpoint-desc">Full drama catalog pagination (alldrama)</div>
-              </div>
-            </div>
-            <button class="btn-test" onclick="runTest('/api/v1/shortdrama/catalog?page=1')">TEST RUNNER</button>
-          </div>
-
-          <div class="endpoint-card">
-            <div class="endpoint-left">
-              <span class="method-tag">GET</span>
-              <div>
-                <div class="endpoint-path">/api/v1/shortdrama/search?q=cinta&lang=id</div>
-                <div class="endpoint-desc">Search short dramas across platforms by keyword and language</div>
-              </div>
-            </div>
-            <button class="btn-test" onclick="runTest('/api/v1/shortdrama/search?q=cinta&lang=id')">TEST RUNNER</button>
-          </div>
-
-          <div class="endpoint-card">
-            <div class="endpoint-left">
-              <span class="method-tag">GET</span>
-              <div>
-                <div class="endpoint-path">/api/v1/shortdrama/episodes/7594776181166050357</div>
-                <div class="endpoint-desc">Full episode list for a drama with video IDs, duration, and lock status</div>
-              </div>
-            </div>
-            <button class="btn-test" onclick="runTest('/api/v1/shortdrama/episodes/7594776181166050357')">TEST RUNNER</button>
-          </div>
-
-          <div class="endpoint-card">
-            <div class="endpoint-left">
-              <span class="method-tag">GET</span>
-              <div>
-                <div class="endpoint-path">/api/v1/shortdrama/stream/7594776181166050357/1</div>
-                <div class="endpoint-desc">Direct MP4 video stream resolver (Melolo multi-quality 720p/540p/480p/360p)</div>
-              </div>
-            </div>
-            <button class="btn-test" onclick="runTest('/api/v1/shortdrama/stream/7594776181166050357/1')">TEST RUNNER</button>
-          </div>
-
-          <div class="endpoint-card">
-            <div class="endpoint-left">
-              <span class="method-tag">GET</span>
-              <div>
-                <div class="endpoint-path">/api/v1/shortdrama/reelshort/stream/6a9fa7885ca348a0e50b4697/1</div>
-                <div class="endpoint-desc">Direct HLS video stream resolver (ReelShort CDN fallback)</div>
-              </div>
-            </div>
-            <button class="btn-test" onclick="runTest('/api/v1/shortdrama/reelshort/stream/6a9fa7885ca348a0e50b4697/1')">TEST RUNNER</button>
           </div>
         </div>
       </div>

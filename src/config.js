@@ -14,9 +14,7 @@ export const CONFIG = {
     LK21: 'https://tv12.lk21official.cc',
     DRAMA: 'https://dramamu.lk21.de',
     KURAMANIME: 'https://v20.kuramanime.ing',
-    IKIRU: 'https://08.ikiru.wtf',
-    LAPAKDRACIN: 'https://lapakdracin.com/api',
-    MELOLO_SEARCH: 'https://melolo.goodbos.online'
+    IKIRU: 'https://08.ikiru.wtf'
   },
   CACHE_TTL: {
     HOME: 5 * 60 * 1000,         // 5 minutes

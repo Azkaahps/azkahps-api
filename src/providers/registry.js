@@ -2,7 +2,6 @@ import { Hono } from 'hono';
 import { lk21Router, metadata as lk21Meta } from './movie/lk21/index.js';
 import { kuramanimeRouter, metadata as kuramaMeta } from './anime/kuramanime/index.js';
 import { ikiruRouter, metadata as ikiruMeta } from './comic/ikiru/index.js';
-import { meloloRouter, metadata as meloloMeta } from './shortdrama/melolo/index.js';
 
 /**
  * Provider Registry Definition
@@ -29,13 +28,6 @@ export const PROVIDERS = [
     meta: ikiruMeta,
     router: ikiruRouter
   },
-  {
-    category: 'shortdrama',
-    provider: 'melolo',
-    isDefault: true,
-    meta: meloloMeta,
-    router: meloloRouter
-  }
 ];
 
 /**
